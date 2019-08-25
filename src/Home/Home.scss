@@ -1,0 +1,80 @@
+#home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient( rgba(0,0,0,.6), rgba(0,0,0,.6)),url('https://picsum.photos/id/575/1920/1080');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.home-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    padding-left: 5%;
+}
+
+.home-text {
+    width: 70%;
+    color: white;
+    font-weight: bold;
+}
+
+.home-text h1, h2 {
+    margin-bottom: 50px;
+    text-shadow: 2px 2px black;
+}
+
+.home-text h1 {
+    font-size: 35px;
+}
+
+.home-text h2 {
+    font-size: 15px;
+}
+
+.button-offer {
+    color:white;
+    font-size: 14pt;
+    font-weight: bold; /* czemu z home-text nie pobrało stylu czcionki ?*/
+    background: none;
+    border: 3px white solid;
+    padding: 10px 40px;
+    cursor: pointer;
+    transition: 1s all;
+}
+
+
+@media screen and (min-width: 768px) {
+    .home-container {
+        padding-left: 0;
+    }
+
+    .home-text h1 {
+        font-size: 40px;
+    }
+
+    .home-text h2 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .home-container {
+        padding-left: 0;
+    }
+
+    .home-text h1 {
+        font-size: 40px;
+    }
+
+    .home-text h2 {
+        font-size: 20px;
+    }
+
+    .button-offer:hover {
+        color: black;
+        background-color: white;
+    }
+}

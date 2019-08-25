@@ -1,0 +1,105 @@
+@import '../variables.scss';
+nav {
+    background-color: $grayColor;
+    height: 50px;
+}
+
+nav a {
+    margin-left: 45px;
+    color:$whiteColor;
+    text-decoration: none;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    font-size: 18px;
+}
+
+.nav-container > a:first-of-type {
+    margin-left: 25px;
+}
+
+.nav--links {
+    display: none;
+}
+
+.nav--links a:last-child {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.nav--toggler {
+    position: relative;
+    width: 40px;
+    height: 30px;
+    border: none;
+    outline:none;
+    border-top: 3px solid $whiteColor;
+    background: transparent;
+    transition: 0.5s transform linear;
+}
+
+.nav--toggler::before, .nav--toggler::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 3px solid $whiteColor;
+    transform: translateY(9px);
+}
+
+.nav--toggler::after {
+    transform: translateY(20px);
+    transition: 0.5s transform linear;
+}
+
+.nav--toggler:focus {
+    transform: rotate(45deg) translateY(3px);
+    border: none;
+}
+
+.nav--toggler:focus::after {
+    transform: rotate(-90deg) translateX(-9px);
+}
+
+@media screen and (min-width: 768px) {
+    .nav- {
+      padding-left: 0;
+    }
+
+   .nav--links {
+        display: block;
+    }
+
+    .nav-container > a:first-of-type {
+        margin: 0;
+    }
+
+    .nav--toggler {
+      display: none;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .nav-container {
+        padding-left: 0;
+    }
+
+    .nav--links {
+        display: block;
+    }
+
+    .nav-container > a:first-of-type {
+        margin: 0;
+    }
+
+    .nav--toggler {
+      display: none;
+    }
+
+}
