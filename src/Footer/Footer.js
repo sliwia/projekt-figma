@@ -1,6 +1,7 @@
 import React from 'react';
-import './Footer.scss'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import './Footer.scss';
 
 class Footer extends React.Component {
     render() {
@@ -9,8 +10,8 @@ class Footer extends React.Component {
                 <div className="container footer-container">
                     <span>Nazwa firmy, wszelkie prawa zastrzeżone, 2019</span>
                     <div >
-                        <i className="fab fa-instagram fa-1.7x"></i>
-                        <i className="fab fa-facebook-square fa-1.7x"></i>
+                        <FontAwesomeIcon icon={ faFacebook } />
+                        <FontAwesomeIcon icon={ faInstagram } />
                     </div>
                 </div>
             </footer>

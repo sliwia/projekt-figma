@@ -1,8 +1,7 @@
 import React from 'react';
 import { Persons } from './Persons.json';
-import AddPerson from '../AddPerson/AddPerson'
+import AddPerson from './AddPerson/AddPerson'
 import './About.scss';
-
 
 class About extends React.Component {
     render() {
@@ -13,9 +12,8 @@ class About extends React.Component {
                     <h1 className="title-specialists">Nasi specjaliści</h1>
                     {    
                         Object.entries(Persons)
-                        .map((aboutValue,index) =>{
-                            console.log(aboutValue);
-                          return <AddPerson title={aboutValue[1].title} description={aboutValue[1].description} />;
+                        .map((aboutValue,idx) =>{
+                          return <AddPerson title={aboutValue[1].title} description={aboutValue[1].description} key={idx} />;
                         })
                     }
                 </div>
